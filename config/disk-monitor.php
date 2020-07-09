@@ -2,8 +2,12 @@
 
 return [
     /**
-     * The name of disk you want to monitor
+     * The names of disk you want to monitor
      * 
      */
-    'disk_name' => 'local',
+    'disk_names' => [
+        'local' ,
+    ],
+
+
 ];
