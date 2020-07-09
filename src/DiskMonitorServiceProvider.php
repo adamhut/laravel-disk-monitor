@@ -3,7 +3,7 @@
 namespace Adamhut\DiskMonitor;
 
 use Illuminate\Support\ServiceProvider;
-use Adamhut\DiskMonitor\Commands\DiskMonitorCommand;
+use Adamhut\DiskMonitor\Commands\RecordDiskMetricsCommand;
 
 class DiskMonitorServiceProvider extends ServiceProvider
 {
@@ -25,7 +25,7 @@ class DiskMonitorServiceProvider extends ServiceProvider
             }
 
             $this->commands([
-                RecordDiskMetrics::class,
+                RecordDiskMetricsCommand::class,
             ]);
         }
 
