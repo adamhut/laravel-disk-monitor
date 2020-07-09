@@ -3,7 +3,6 @@
 namespace Adamhut\DiskMonitor;
 
 use Illuminate\Support\ServiceProvider;
-use Adamhut\DiskMonitor\Commands\DiskMonitorCommand;
 
 class DiskMonitorServiceProvider extends ServiceProvider
 {
