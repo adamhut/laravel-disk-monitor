@@ -1,12 +1,11 @@
-<?php 
+<?php
 namespace Adamhut\DiskMonitor\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-
 class DiskMonitorEntry extends Model
 {
-    protected $guarded = [];    
+    protected $guarded = [];
 
 
     protected $casts = [
@@ -18,5 +17,4 @@ class DiskMonitorEntry extends Model
     {
         return static::orderByDesc('id')->first();
     }
-
 }
