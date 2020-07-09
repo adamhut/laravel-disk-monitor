@@ -2,9 +2,9 @@
 
 namespace Adamhut\DiskMonitor\Commands;
 
+use Adamhut\DiskMonitor\Models\DiskMonitorEntry;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
-use Adamhut\DiskMonitor\Models\DiskMonitorEntry;
 
 class RecordDiskMetricsCommand extends Command
 {

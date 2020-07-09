@@ -2,8 +2,8 @@
 
 namespace Adamhut\DiskMonitor;
 
-use Illuminate\Support\ServiceProvider;
 use Adamhut\DiskMonitor\Commands\RecordDiskMetricsCommand;
+use Illuminate\Support\ServiceProvider;
 
 class DiskMonitorServiceProvider extends ServiceProvider
 {

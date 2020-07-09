@@ -3,21 +3,17 @@
 namespace Adamhut\DiskMonitor\Tests\Feature\Commands;
 
 use Adamhut\DiskMonitor\Commands\RecordDiskMetricsCommand;
-use Adamhut\DiskMonitor\DiskMonitorFacade;
 use Adamhut\DiskMonitor\Models\DiskMonitorEntry;
 use Adamhut\DiskMonitor\Tests\TestCase;
 use Illuminate\Support\Facades\Storage;
 
 class RecordDiskMetricsCommandTest extends TestCase
 {
-    
-    
     public function setUp(): void
     {
         parent::setUp();
 
         Storage::fake('local');
-
     }
 
 
@@ -31,7 +27,7 @@ class RecordDiskMetricsCommandTest extends TestCase
 
         $entry = DiskMonitorEntry::last();
 
-        $this->assertEquals(0,$entry->file_count);
+        $this->assertEquals(0, $entry->file_count);
 
         Storage::disk('local')->put('test.txt', 'test');
         $this->artisan(RecordDiskMetricsCommand::class)
@@ -42,7 +38,5 @@ class RecordDiskMetricsCommandTest extends TestCase
         $entry = DiskMonitorEntry::last();
 
         $this->assertEquals(1, $entry->file_count);
-
     }
-
 }
