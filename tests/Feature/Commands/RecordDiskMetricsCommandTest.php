@@ -15,7 +15,6 @@ class RecordDiskMetricsCommandTest extends TestCase
 
         Storage::fake('local');
         Storage::fake('another_disk');
-
     }
 
 
@@ -45,7 +44,7 @@ class RecordDiskMetricsCommandTest extends TestCase
     /** @test */
     public function t_will_record_the_file_count_for_a_multiple_disks()
     {
-        config()->set('disk-monitor.disk_names',['local','another_disk']);
+        config()->set('disk-monitor.disk_names', ['local','another_disk']);
         Storage::disk('another_disk')->put('test.txt', 'test');
 
         $this->artisan(RecordDiskMetricsCommand::class)
@@ -54,19 +53,16 @@ class RecordDiskMetricsCommandTest extends TestCase
         $entries = DiskMonitorEntry::get();
         $this->assertCount(2, DiskMonitorEntry::get());
 
-        $this->assertEquals('local',$entries[0]->disk_name);
+        $this->assertEquals('local', $entries[0]->disk_name);
         $this->assertEquals(0, $entries[0]->file_count);
 
         $this->assertEquals('another_disk', $entries[1]->disk_name);
-        $this->assertEquals( 1,$entries[1]->file_count );
+        $this->assertEquals(1, $entries[1]->file_count);
 
        
         $this->artisan(RecordDiskMetricsCommand::class)
             ->assertExitCode(0);
 
         $this->assertCount(4, DiskMonitorEntry::all());
-
-
     }
-
 };
