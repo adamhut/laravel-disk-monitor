@@ -1,13 +1,13 @@
 <?php
 
-namespace Adamhut\LaravelDiskMonitor;
+namespace Adamhut\DiskMonitor;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Adamhut\LaravelDiskMonitor\LaravelDiskMonitor
+ * @see \Adamhut\DiskMonitor\DiskMonitor
  */
-class LaravelDiskMonitorFacade extends Facade
+class DiskMonitorFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {

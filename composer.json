@@ -1,38 +1,39 @@
 {
-    "name": "spatie/laravel-disk-monitor",
+    "name": "adamhut/laravel-disk-monitor",
     "description": "Monitor Metric of laravel disks",
     "keywords": [
-        "spatie",
+        "adamhut",
         "laravel-disk-monitor"
     ],
-    "homepage": "https://github.com/spatie/laravel-disk-monitor",
+    "homepage": "https://github.com/adamhut/laravel-disk-monitor",
     "license": "MIT",
     "authors": [
         {
             "name": "Adam Huang",
             "email": "adamhut@gmail.com",
-            "homepage": "https://spatie.be",
+            "homepage": "https://github.com/adamhut",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.3",
+        "illuminate/console": "^6.0|^7.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
-        "orchestra/testbench": "^5.0",
+        "orchestra/testbench": "^4.0|^5.0",
         "phpunit/phpunit": "^9.0",
         "psalm/plugin-laravel": "^1.2",
         "vimeo/psalm": "^3.11"
     },
     "autoload": {
         "psr-4": {
-            "Adamhut\\LaravelDiskMonitor\\": "src"
+            "Adamhut\\DiskMonitor\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Adamhut\\LaravelDiskMonitor\\Tests\\": "tests"
+            "Adamhut\\DiskMonitor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Adamhut\\LaravelDiskMonitor\\LaravelDiskMonitorServiceProvider"
+                "Adamhut\\DiskMonitor\\DiskMonitorServiceProvider"
             ],
             "aliases": {
-                "LaravelDiskMonitor": "Adamhut\\LaravelDiskMonitor\\LaravelDiskMonitorFacade"
+                "DiskMonitor": "Adamhut\\DiskMonitor\\DiskMonitorFacade"
             }
         }
     },

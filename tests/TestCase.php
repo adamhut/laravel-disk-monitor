@@ -1,9 +1,9 @@
 <?php
 
-namespace Adamhut\LaravelDiskMonitor\Tests;
+namespace Adamhut\DiskMonitor\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Adamhut\LaravelDiskMonitor\LaravelDiskMonitorServiceProvider;
+use Adamhut\DiskMonitor\DiskMonitorServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -17,7 +17,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            LaravelDiskMonitorServiceProvider::class,
+            DiskMonitorServiceProvider::class,
         ];
     }
 
@@ -30,9 +30,9 @@ class TestCase extends Orchestra
             'prefix' => '',
         ]);
 
-        /*
-        include_once __DIR__.'/../database/migrations/create_laravel_disk_monitor_table.php.stub';
-        (new \CreatePackageTable())->up();
-        */
+        
+        include_once __DIR__.'/../database/migrations/create_disk_monitor_table.php.stub';
+        (new \CreateDiskMonitorTable())->up();
+       
     }
 }

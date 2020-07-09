@@ -1,10 +1,10 @@
 <?php
 
-namespace Adamhut\LaravelDiskMonitor\Commands;
+namespace Adamhut\DiskMonitor\Commands;
 
 use Illuminate\Console\Command;
 
-class LaravelDiskMonitorCommand extends Command
+class RecordDiskMetrics extends Command
 {
     public $signature = 'laravel-disk-monitor';
 
