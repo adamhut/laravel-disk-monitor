@@ -2,9 +2,9 @@
 
 namespace Adamhut\DiskMonitor\Tests;
 
+use Adamhut\DiskMonitor\DiskMonitorServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Adamhut\DiskMonitor\DiskMonitorServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -36,8 +36,5 @@ class TestCase extends Orchestra
         
         include_once __DIR__.'/../database/migrations/create_disk_monitor_table.php.stub';
         (new \CreateDiskMonitorTable())->up();
-
-      
-
     }
 }

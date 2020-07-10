@@ -1,14 +1,14 @@
-<?php 
+<?php
 namespace Adamhut\DiskMonitor\Http\Controllers;
 
 use Adamhut\DiskMonitor\Models\DiskMonitorEntry;
 
-class DiskMetricsController {    
-
+class DiskMetricsController
+{
     public function __invoke()
     {
-        $entries = DiskMonitorEntry::latest()->get();   
+        $entries = DiskMonitorEntry::latest()->get();
 
-        return view('disk-monitor::entries',compact('entries'));
+        return view('disk-monitor::entries', compact('entries'));
     }
 }

@@ -2,10 +2,7 @@
 
 namespace Adamhut\DiskMonitor\Tests\Feature\Http\Controller;
 
-use Adamhut\DiskMonitor\Commands\RecordDiskMetricsCommand;
-use Adamhut\DiskMonitor\Models\DiskMonitorEntry;
 use Adamhut\DiskMonitor\Tests\TestCase;
-use Illuminate\Support\Facades\Storage;
 
 class DiskMetricsControllerTest extends TestCase
 {
@@ -20,6 +17,4 @@ class DiskMetricsControllerTest extends TestCase
             ->get('disk-monitor')
             ->assertOk();
     }
-
-    
 };
