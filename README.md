@@ -13,19 +13,19 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require adamhut/package-laravel-disk-monitor-laravel
+composer require adamhut/laravel-disk-monitor
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Adamhut\LaravelDiskMonitor\LaravelDiskMonitorServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Adamhut\DiskMonitor\DiskMonitorServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Adamhut\LaravelDiskMonitor\LaravelDiskMonitorServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Adamhut\DiskMonitor\DiskMonitorServiceProvider" --tag="config"
 ```
 
 This is the contents of the published config file:
